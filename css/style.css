@@ -1,0 +1,155 @@
+:root {
+
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --DesaturatedBlue: hsl(224, 23%, 55%);
+    --DarkBlue: hsl(223, 47%, 23%)
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    right: 25%;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/*font-family: 'Red Hat Display', sans-serif;*/
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--paleBlue);
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    width: min-content;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.container-info {
+    max-width: 100%;
+    background-color: #FFF;
+    text-align: center;
+    padding: 20px 50px;
+    border-radius: 0 0 15px 15px;
+    margin-top: -5px;
+}
+
+.container-info__plan {
+    display: flex;
+    align-items: center;
+    gap: 23%;
+    background-color: var(--veryPaleBlue);
+    padding: 20px;
+    margin-bottom: 10%;
+    border-radius: 15px;
+}
+
+.container-plan__cost {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.container-plan__price{
+    color: var(--DesaturatedBlue);
+}
+
+.container-plan__type{
+    font-weight: 700;
+}
+
+.container-info__change:hover {
+    text-decoration: none;
+}
+
+.container-info__buttons {
+    display: grid;
+}
+
+.container-button__payment {
+    background-color: var(--brightBlue);
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: #FFF;
+    margin-bottom: 10%;
+    box-shadow: 0px 15px 30px -12px hsl(224, 23%, 55%);
+}
+
+.container-button__payment:hover {
+    background-color: hsl(245, 83%, 68%);
+}
+
+.container-button__cancel {
+    text-decoration: none;
+    color: var(--DesaturatedBlue);
+    font-weight: 700;
+    margin-bottom: 5%;
+}
+
+.container-button__cancel:hover {
+    color: var(--DarkBlue);
+}
+
+.container h2{
+    color: var(--DarkBlue);
+}
+
+.container-plan__cost img{
+    grid-row: span 2;
+}
+
+.container-info p {
+    color: var(--DesaturatedBlue);
+}
+
+.container img {
+    border-radius: 15px 15px 0 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    .container img {
+        width: 100%;
+    }
+    .container-info {
+        padding: 20px 30px;
+    }
+    .container-info__plan a{
+        font-size: 12px;
+    }
+    .container-plan__cost {
+        column-gap: 8px;
+        gap: 5px;
+    }
+    .container-plan__type{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        font-size: 11px;
+    }
+    .container-plan__price{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        font-size: 12px;
+    }
+}
